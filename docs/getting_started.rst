@@ -34,27 +34,6 @@ To use :pypi:`django-celery-results` with your project you need to follow these 
 
         CELERY_RESULT_BACKEND = 'django-db'
 
-    For the cache backend you can use:
-
-    .. code-block:: python
-
-        CELERY_CACHE_BACKEND = 'django-cache'
-
-    We can also use the cache defined in the CACHES setting in django.
-
-    .. code-block:: python
-
-        # celery setting.
-        CELERY_CACHE_BACKEND = 'default'
-
-        # django setting.
-        CACHES = {
-            'default': {
-                'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-                'LOCATION': 'my_cache_table',
-            }
-        }
-
     If you want to include extended information about your tasks remember to enable the :setting:`result_extended` setting.
 
     .. code-block:: python
